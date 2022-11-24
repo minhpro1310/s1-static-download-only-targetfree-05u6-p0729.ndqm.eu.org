@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TEST PAGE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>HEADER H1</h1>
+    <h2>HEADER H2</h2>
+    <h3>HEADER H3</h3>
+    <p>Text</p>
+    <div id="btntest">
+        <button onclick="jsactive()">Button 1</button>
+        <button onclick="jsactive()">Button 2</button>
+        <button onclick="jsactive()">Button 3</button>
+        <button onclick="jsactive()">Button 4</button>
+        <button onclick="jsactive()">Button 5</button>
+        <button onclick="jsactive()">Button 6</button>
+    </div>
+    <div id="demotrans">
+        <div id="square">
+            <p>Text<br>No Delay</p>
+        </div>
+    </div>
+    <div id="demotrans2">
+        <div id="square2">
+            <p>Text<br>Delay 1500ms</p>
+        </div>
+    </div>
+    <div id="demogetdata">
+        <div id="l1">
+            <input type="text" id="textf" placeholder="Enter text" />
+            <button onclick="smdt()">Get data</button>
+            <p id="rs"></p>
+            <script>
+                function smdt() {
+                    var dt = document.getElementById('textf').value;
+                    document.getElementById('rs').innerHTML = 'Result: ' + dt;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+<script>
+    function jsactive() {
+        alert('JavaScript Active!');
+    }
+</script>
+<style>
+    #demotrans {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+    
+    #demotrans:hover {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+    }
+    
+    #demotrans2 {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        transition: 1500ms;
+    }
+    
+    #demotrans2:hover {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+    }
+</style>
+
+</html>
